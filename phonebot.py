@@ -7,10 +7,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def voice():
-    response = VoiceResponse()
-    response.play('', digits='wwww#')
-
-    return str(response)
+    response = VoiceResponse().play('', digits='wwww#')
+    return response
 
 if __name__ == "__main__":
     app.run(debug=False)
