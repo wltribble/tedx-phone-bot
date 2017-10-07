@@ -14,7 +14,7 @@ def twiml(resp):
 def voice():
     response = VoiceResponse()
     with response as g:
-        g.play(url='https://api.twilio.com/cowbell.mp3')
+        g.play('', digits='wwww#')
     return twiml(response)
 
 if __name__ == "__main__":
