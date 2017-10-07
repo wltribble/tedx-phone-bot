@@ -5,7 +5,7 @@ from twilio.twiml.voice_response import Play, VoiceResponse
 app = Flask(__name__)
 
 
-@app.route('/tedx_phone_response', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def voice():
     response = VoiceResponse()
     response.play('', digits='wwww#')
