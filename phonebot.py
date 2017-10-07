@@ -13,8 +13,8 @@ def twiml(resp):
 @app.route('/', methods=['POST'])
 def voice():
     response = VoiceResponse()
-    with response as g:
-        g.play('', digits='wwww#')
+    with response as r:
+        r.play('', digits='wwww#')
     return twiml(response)
 
 if __name__ == "__main__":
