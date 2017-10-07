@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect
-from twilio.twiml.voice_response import Play, VoiceResponse
+from twilio.twiml.voice_response import VoiceResponse
 
 
 app = Flask(__name__)
