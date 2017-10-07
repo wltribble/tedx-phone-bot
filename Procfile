@@ -1,1 +1,1 @@
-web gunicorn forecast:app
+web gunicorn phonebot:app
