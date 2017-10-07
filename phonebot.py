@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def voice():
-    response = VoiceResponse().play('https://api.twilio.com/cowbell.mp3', digits='wwww#')
+    response = VoiceResponse().play('https://api.twilio.com/cowbell.mp3')
     return str(response)
 
 if __name__ == "__main__":
