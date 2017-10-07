@@ -12,7 +12,9 @@ def twiml(resp):
 
 @app.route('/', methods=['POST'])
 def voice():
-    response = VoiceResponse().play(url='https://api.twilio.com/cowbell.mp3')
+    response = VoiceResponse()
+    with response as g:
+        g.play(url='https://api.twilio.com/cowbell.mp3')
     return twiml(response)
 
 if __name__ == "__main__":
